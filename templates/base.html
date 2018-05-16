@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>BiziPress - HTML5 Template</title>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+   <!-- CSS
+   ================================================== -->
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   <!-- FontAwesome -->
+   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="{% static 'css/morris.css' %}">
+   <!-- Icon font -->
+   <link rel="stylesheet" href="{% static 'css/icon-font.css' %}">
+   <!-- Animation -->
+   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+   <!-- Owl Carousel -->
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+   <!-- Colorbox -->
+   <link rel="stylesheet" href="{% static 'css/colorbox.css' %}">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+   <!--[if lt IE 9]>
+   <script src="js/html5shiv.js"></script>
+   <script src="js/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+  <div class="body-inner">
+
+     <div class="site-top">
+        <div class="topbar-transparent" id="top-bar">
+           <div class="container">
+              <div class="row">
+                 <div class="col-lg-9 col-md-9 col-sm-12">
+                    <ul class="top-info">
+                       <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                          <div class="info-wrapper">
+                             <p class="info-title">708-223-0216</p>
+                          </div>
+                       </li>
+                       <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                          <div class="info-wrapper">
+                             <p class="info-title">sales@greaterdemand.com</p>
+                          </div>
+                       </li>
+                       <li class="last"><span class="info-icon"><i class="icon icon-map-marker2"></i></span>
+                          <div class="info-wrapper">
+                             <p class="info-title">10001 W Roosevelt Road Suite 202 Westchester, IL</p>
+                          </div>
+                       </li>
+                    </ul>
+                    <!-- Ul end-->
+                 </div>
+                 <!--Top info end-->
+                 <div class="col-lg-3 col-md-3 col-sm-12 text-lg-right text-md-center">
+                    <ul class="top-social">
+                       <li>
+                          <a title="Facebook" href="https://www.facebook.com/pg/Greater-Demand-Solutions-603823689766401/about/?ref=page_internal">
+                       <span class="social-icon"><i class="fa fa-facebook"></i></span>
+                    </a>
+                          <a title="Linkdin" href="#">
+                       <span class="social-icon"><i class="fa fa-linkedin"></i></span>
+                    </a>
+                       </li>
+                       <!-- List End -->
+                    </ul>
+                    <!-- Top Social End -->
+                 </div>
+                 <!--Col end-->
+              </div>
+              <!--Content row end-->
+           </div>
+           <!--Container end-->
+        </div>
+        <!--Top bar end-->
+
+        <header class="header-trans-leftbox" id="header">
+           <div class="container">
+              <div class="header-wrapper clearfix">
+                 <div class="site-nav-inner">
+                    <nav class="navbar navbar-expand-lg">
+                       <div class="navbar-brand navbar-header">
+                          <div class="logo">
+                             <a href="index.html">
+                                <img src="{% static 'images/logo.png'%}" alt="">
+                             </a>
+                          </div>
+                          <!-- logo end-->
+                       </div>
+                       <!-- Navbar brand end-->
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                       <!-- End of Navbar toggler-->
+                       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                          <ul class="navbar-nav">
+                             <li class="nav-item dropdown active">
+                                <a class="nav-link" href="{% url 'home' %}" data-toggle="dropdown">Home</a>
+                             <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">About Us<i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                   <li><a href="{% url 'about' %}">Our Team</a></li>
+                                </ul>
+                             </li>
+                             <!-- Page li end-->
+                             <li class="nav-item dropdown"><a class="nav-link" href="{% url 'services' %}">Our Services</a>
+                             </li>
+                             <!-- Service li end-->
+                             <li class="nav-item dropdown">
+                                <a class="nav-link" href="{% url 'contact'%}">Contact</a>
+                             </li>
+                             <!-- Contact li End -->
+                          </ul>
+                          <!--Nav ul end-->
+                       </div>
+                    </nav>
+                    <!--Collapse end-->
+                    <div class="nav-search"><span id="search"><i class="icon icon-search"></i></span></div>
+                    <!-- Search end-->
+                    <div class="search-block" style="display: none;">
+                       <input class="form-control" type="text" placeholder="Search"><span class="search-close">×</span>
+                    </div>
+                    <!-- Site search end-->
+                 </div>
+                 <!--Site nav inner end-->
+              </div>
+              <!-- Header wrapper end-->
+           </div>
+           <!--Container end-->
+        </header>
+        <!--Header end-->
+     </div>
+
+
+   {% block content %}
+
+   {% endblock content %}
+ </body>
+
+ </html>
